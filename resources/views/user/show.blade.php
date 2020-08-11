@@ -48,22 +48,29 @@
                 <p>{{ $user->aria }}</p>
                 <p>{{ $user->introduction }}</p>
             </div>
-            @foreach($posts as $post)
             <div class="album py-5 bg-light">
                 <div class="container">
                     <div class="row">
-                        <div class="card md-4">
+                        @foreach($posts as $post)
+                        <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
-                                <img class="card-img-top" src="/storage/post_images/{{ $post->id }}.jpg"  />
+                                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="/storage/post_images/{{ $post->id }}.jpg"  />
                                 <div class="card-body">
                                     <p>{{ $post -> caption }}</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">見る</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>    
                 </div>
             </div>
-            @endforeach
         </div>
     </div>
 </div>
