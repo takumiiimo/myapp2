@@ -28,3 +28,12 @@
 .setting:hover {
   cursor: pointer;
 }
+.nav-link-message {
+  background-image: url("/images/parts10.png");
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  margin: 20px 0 0 20px;
+  background-size: 22px !important;
+}

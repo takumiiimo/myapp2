@@ -48,7 +48,7 @@ class ModelPostsController extends Controller
         return redirect('/model');
     }
     
-    public function destory($post_id)
+    public function destroy($post_id)
     {
         $post = ModelPost::find($post_id);
         $post->delete();

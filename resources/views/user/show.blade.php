@@ -19,6 +19,8 @@
                 
                 <h4>{{ $user->name }}</h4>
                 
+                <a class="nav-link-message" href="/chat/{{ $user->id }}"></a>
+                
                 @if ($user->id == Auth::user()->id)
                     <a class="btn btn-outline-dark common-btn edit-profile-btn" href="/users/edit">プロフィールを編集</a>
                     <a class="btn btn-outline-dark common-btn edit-profile-btn" rel="nofollow" data-method="POST" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>

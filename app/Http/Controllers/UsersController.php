@@ -25,7 +25,7 @@ class UsersController extends Controller
         ->firstOrFail();
         
         if($user->role == 'creator'){
-            $posts = CreatorPost::all()
+            $posts = CreatorPost::limit(100)
             ->orderBy('created_at','desc')
             ->get();
         }

@@ -50,7 +50,7 @@ class CreatorPostsController extends Controller
         return redirect('/creator');
     }
         
-    public function destory($post_id)
+    public function destroy($post_id)
     {
         $post = CreatorPost::find($post_id);
         $post->delete();

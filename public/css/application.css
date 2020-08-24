@@ -116,6 +116,15 @@ footer {
 .setting:hover {
   cursor: pointer;
 }
+.nav-link-message {
+  background-image: url("/images/parts10.png");
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  margin: 20px 0 0 20px;
+  background-size: 22px !important;
+}
 .profile-form-wrap {
   background: #fff;
   padding: 20px;
@@ -177,4 +186,17 @@ footer {
   background-size: 20px !important;
   color: #262626;
   font-size: 20px;
+}
+.loved {
+  background-image: url("/images/parts7.png");
+  background-repeat: no-repeat;
+  height: 36px;
+  width: 36px;
+  background-size: 36px !important;
+}
+.hide-text {
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
 }

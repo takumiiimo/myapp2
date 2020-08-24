@@ -40,8 +40,7 @@ Route::get('/creator/posts/new', 'CreatorPostsController@new')->name('creator_ne
 Route::post('/creator/posts', 'CreatorPostsController@store');
 
 // クリエイター投稿削除処理
-Route::get('/creator/postsdelete/{post_id}', 'CreatorPostsController@destory');
-
+Route::get('/postsdelete/{creator_post_id}', 'CreatorPostsController@destroy');
 
 // モデル投稿新規画面
 Route::get('/model/posts/new', 'ModelPostsController@new')->name('model_new');
@@ -50,4 +49,4 @@ Route::get('/model/posts/new', 'ModelPostsController@new')->name('model_new');
 Route::post('/model/posts', 'ModelPostsController@store');
 
 // モデル投稿削除処理
-Route::get('/model/postsdelete/{post_id}', 'ModelPostsController@destory');
+Route::get('/model/postsdelete/{post_id}', 'ModelPostsController@destroy');

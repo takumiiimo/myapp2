@@ -2,8 +2,8 @@
 @include('navbar')
 @include('footer')
 
-@foreach ($posts as $post) 
 @section('content')
+@foreach ($posts as $post) 
   <div class="col-md-8 col-md-2 mx-auto">
     <div class="card-wrap">
       <div class="card">
@@ -19,7 +19,7 @@
             <strong>{{ $post->user->name }}</strong>
           </a>
           @if($post->user->id == Auth::user()->id)
-            <a class="ml-auto mx-0 my-auto" rel="nofollow" href="/model/postsdelete/{{ $post->id }}">
+            <a class="ml-auto mx-0 my-auto" rel="nofollow" href="/creator/postsdelete/{{ $post->id }}">
               <div class="delete-post-icon">
               </div>
             </a>
@@ -28,8 +28,13 @@
         <a href="/users/{{ $post->user->id }}">
           <img src="/storage/post_images/{{ $post->id }}.jpg" class="card-img-top" />
         </a>
-
-
+        <div class="card-body">
+          
+          <div>
+            <span><strong>{{ $post->user->name }}</strong></span>
+            <span>{{ $post->caption }}</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
