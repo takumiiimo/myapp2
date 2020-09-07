@@ -19,7 +19,11 @@
                 
                 <h4>{{ $user->name }}</h4>
                 
-                <a class="nav-link-message" href="/chat/{{ $user->id }}"></a>
+                <form method="POST" action="{{ route('chat.show') }}">
+                 {{ csrf_field() }}
+                    <input name="user_id" type="hidden" value="{{$user->id}}">
+                    <button type="submit" class="nav-link-chat"></button>
+                </form>
                 
                 @if ($user->id == Auth::user()->id)
                     <a class="btn btn-outline-dark common-btn edit-profile-btn" href="/users/edit">プロフィールを編集</a>
@@ -56,16 +60,9 @@
                         @foreach($posts as $post)
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
-                                <img class="bd-placeholder-img card-img-top" width="100%" height="100%" src="/storage/post_images/{{ $post->id }}.jpg"  />
+                                <img class="bd-placeholder-img card-img-top" src="/storage/post_images/{{ $post->id }}.jpg"  />
                                 <div class="card-body">
                                     <p>{{ $post -> caption }}</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">見る</button>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -76,4 +73,7 @@
         </div>
     </div>
 </div>
+
+
 @endsection
+

@@ -19,6 +19,9 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "push.js": "^1.0.12"
+        "aws-sdk": "^2.745.0",
+        "laravel-echo": "^1.8.1",
+        "push.js": "^1.0.12",
+        "pusher-js": "^7.0.0"
     }
 }

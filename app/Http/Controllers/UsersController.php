@@ -35,7 +35,7 @@ class UsersController extends Controller
             ->orderBy('created_at','desc')
             ->get();
         }
-            
+
         return view('user/show', ['user' => $user , 'posts' => $posts]);
     }
     

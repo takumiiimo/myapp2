@@ -1,0 +1,84 @@
+.chatPage {
+    input[type="text"]:focus {
+        outline: 0;
+    }
+    .messagesArea {
+        overflow: scroll;
+        height: 72vh;
+        .message {
+            &.selfMessage {
+                display: flex;
+                flex-direction: row-reverse;
+                .commonMessage {
+                    margin: 1.5em 15px 1.5em 0;
+                    padding: 7px 10px;
+                    max-width: 100%;
+                    color: #555;
+                    font-size: 16px;
+                    background: #e0edff;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 100%;
+                        margin-top: -10px;
+                        border: 10px solid transparent;
+                        border-left: 10px solid #e0edff;
+                    }
+                }
+            }
+            .commonMessage {
+                position: relative;
+                display: inline-block;
+                margin: 1.5em 0 1.5em 15px;
+                padding: 7px 10px;
+                max-width: 100%;
+                color: #555;
+                font-size: 16px;
+                border-radius: 7px;
+                background: #f1f1f1;
+                & > p {
+                    margin: 0;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: -20px;
+                    margin-top: -10px;
+                    border: 10px solid transparent;
+                    border-right: 10px solid #f1f1f1;
+                }
+                &.selfMessage {
+                margin: 1.5em 15px 1.5em 0;
+                padding: 7px 10px;
+                max-width: 100%;
+                color: #555;
+                font-size: 16px;
+                background: #e0edff;
+               &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                margin-top: -10px;
+                border: 10px solid transparent;
+                border-left: 10px solid #e0edff;
+                    }
+                }
+            }
+        }
+    }
+    .messageInputForm {
+        position: fixed;
+        bottom: 100px;
+        border-top: 1px solid #e8e8e8;
+        padding: 30px 0;
+        width: 100%;
+        &_input {
+            width: 85%;
+            border: none;
+           
+        }
+    }
+}

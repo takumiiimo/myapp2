@@ -50,3 +50,9 @@ Route::post('/model/posts', 'ModelPostsController@store');
 
 // モデル投稿削除処理
 Route::get('/model/postsdelete/{post_id}', 'ModelPostsController@destroy');
+
+Route::get('/matching', 'MatchingController@index')->name('matching');
+
+Route::post('/chat/show', 'ChatController@show')->name('chat.show');
+
+Route::post('/chat/chat', 'ChatController@chat')->name('chat.chat');
